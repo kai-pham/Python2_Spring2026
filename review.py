@@ -116,10 +116,58 @@
 
 
 #list
-numbers = [10,50,20,40,30]
-print(f'Sum of numbers: {sum(numbers)}')
-print(f'Maximum number: {max(numbers)}')
-print(f'Minimum number: {min(numbers)}')
-print(f'Index of max value of numbers: {numbers.index(max(numbers))}')
-print(f'Index of min value of numbers: {numbers.index(min(numbers))}')
-print(f'Reversed list: {list(reversed(numbers))}')
+# numbers = [10,50,20,40,30]
+# print(f'umbers:{numbers}')
+# print(f'Sum of numbers:{sum(numbers)}')
+# print(f'Max value of numbers:{max(numbers)}')
+# print(f'Min value of numbers:{min(numbers)}')
+# print(f'Index of max value of numbers:{numbers.index(max(numbers))}')
+# print(f'Index value of min numbers:{numbers.index(min(numbers))}')
+# print(f'Reversed numbers:{numbers[::-1]}')
+# ordered_numbers = sorted(numbers)
+# print(f'Order list: {ordered_numbers}')
+# matrix - two-dimensional list
+matrix = [[1,2,3],
+          [4,5,6],
+          [7,8,9]]
+matrix_sum = 0 
+for row in matrix:
+    for col in row:
+        matrix_sum += col
+print(f'The matrix sum:{matrix_sum}')
+
+#row sums
+row_sums = [sum(row) for row in matrix]
+print(f'row sums:{row_sums}')
+
+#using loops
+row_sum = 0
+for row in range (len(matrix)):
+    for col in range (len(matrix[row])):
+        row_sum += matrix[row][col]
+    print(f'Row {row + 1} sum: {row_sum}')
+    row_sum = 0
+
+
+# column sum
+col_sums = [sum(row[i] for row in matrix) for i in range(len(matrix[0]))]
+print(f'col sums: {col_sums}')
+
+#using loops
+col_sum = 0
+for col in range(len(matrix[0])):
+    for row in range(len(matrix)):
+        col_sum += matrix[row][col]
+    print(f'Column {col + 1} sum: {col_sum}')
+    col_sum = 0
+    
+    
+#flatten the matrix
+flattened = [col for row in matrix for col in row]
+print(f'Flattened matrix:{flattened}')
+
+flattened_loop = []
+for row in matrix:
+    for col in row:
+        flattened_loop.append(col)
+print(f'Flattened matrix using loops:{flattened_loop}')

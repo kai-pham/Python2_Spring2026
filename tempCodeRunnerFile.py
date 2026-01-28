@@ -1,0 +1,10 @@
+numbers = [10,50,20,40,30]
+# print(f'umbers:{numbers}')
+# print(f'Sum of numbers:{sum(numbers)}')
+# print(f'Max value of numbers:{max(numbers)}')
+# print(f'Min value of numbers:{min(numbers)}')
+# print(f'Index of max value of numbers:{numbers.index(max(numbers))}')
+# print(f'Index value of min numbers:{numbers.index(min(numbers))}')
+# print(f'Reversed numbers:{numbers[::-1]}')
+# ordered_numbers = sorted(numbers)
+# print(f'Order list: {ordered_numbers}')
