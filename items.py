@@ -17,7 +17,7 @@ class Item:
         return self.qty * self.unit_price
     def __str__(self) :
         """Display object"""
-        return f'Item Name: {self.name}\nQuantity: {self.qty}\nUnit Price: ${self.unit_price:.2f}\nTotal Price: ${self.calc_item_price():.2f}'
+        return f'Item Name: {self.name}Quantity: {self.qty}Unit Price: ${self.unit_price:.2f}Total Price: ${self.calc_item_price():.2f}'
 
 #test class
 if __name__ == "__main__":

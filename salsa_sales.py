@@ -4,7 +4,7 @@
 
 class SalsaSales:
     """SalsaSales class to keep track of different flavors of sales for a store"""
-    def __init__(self, flavor, jars_sold=0, unit_price=0.0) -> None:
+    def __init__(self, flavor="", jars_sold=0, unit_price=0.0) -> None:
         """initializer (constructor) """
         self.flavor = flavor
         self.jars_sold = jars_sold
@@ -17,7 +17,7 @@ class SalsaSales:
     
     def __str__(self) :
         """Display object"""
-        return f'Salsa Flavor: {self.flavor:10s}\nJars Sold: {self.jars_sold:10d}\nUnit Price: ${self.unit_price:12.2f}\nTotal Sales: ${self.calc_total_sales():.2f}'
+        return f'{self.flavor:10s}{self.jars_sold:10d}{self.unit_price:12.2f}{self.calc_total_sales():12.2f}'
     
 #test class
 if __name__ == "__main__":
